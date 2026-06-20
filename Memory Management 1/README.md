@@ -1,4 +1,4 @@
-# Memory Mnagement 1
+# Memory Management 1
 
 ## Logical vs. Physical Address
 - Logical address(=virtual address)
