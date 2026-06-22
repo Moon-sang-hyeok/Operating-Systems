@@ -51,3 +51,18 @@
 -  사용되지 않는 주소 공간에 대한 outer page table의 엔트리 값은 NULL (대응하는 inner page table이 없음)
 
 ![alt text](image-4.png)
+
+## Two-Level Paging Example
+- logical address (on 32-bit machine with 4K page size)의 구성
+  - 20 bit의 page number
+  - 12 bit의 page offset
+- page table 자체가 page로 구성되기 때문에 page number는 다음과 같이 나뉜다
+(각 page table entry가 4B)
+  - 10-bit 의 page number.
+  - 10-bit 의 page offset.
+- 따라서, logical address는 다음과 같다
+- P1은 outer page table의 index이고
+- p2는 outer page table의 page에서의 변위(displacement)
+
+# 질문
+1. 2단계 페이지 테이블을 쓰면 주소 번역을 위해 메모리에 2번 접근해야 하므로 속도가 더 느려지지 않나요? 이를 어떻게 해결합니까?
